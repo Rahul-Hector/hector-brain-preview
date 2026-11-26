@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hector Brain — patterns</title>
+<link rel="icon" href="../assets/favicon-brain.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="rail.css">
+<link rel="stylesheet" href="brain.css?v=16">
+<script>try{if(localStorage.getItem('hm-d-collapsed')==='1')document.documentElement.classList.add('collapsed')}catch(e){}</script>
+</head>
+<body>
+<nav class="rail" aria-label="Hector modules">
+  <a class="logo" href="../index.html" aria-label="Hector home"><img src="../assets/logomark.svg" alt=""></a>
+  <a class="ri" href="#" aria-label="Amazon"><svg><use href="sprite.svg#i-amz"/></svg></a>
+  <a class="ri" href="#" aria-label="Flipkart"><span class="letter" style="font-style:italic">f</span></a>
+  <a class="ri" href="#" aria-label="Myntra"><span class="letter">M</span></a>
+  <a class="ri" href="#" aria-label="Blinkit"><span class="letter" style="font-style:italic">b</span></a>
+  <a class="ri" href="#" aria-label="Instamart"><svg><use href="sprite.svg#i-pin"/></svg></a>
+  <a class="ri" href="#" aria-label="Zepto"><span class="letter">z</span></a>
+  <a class="ri" href="#" aria-label="Docs"><svg><use href="sprite.svg#i-book"/></svg></a>
+  <a class="ri active" href="start.html" aria-label="Hector Brain" aria-current="page"><svg><use href="sprite.svg#rail-brain"/></svg></a>
+  <a class="ri" href="#" aria-label="Settings"><svg><use href="sprite.svg#i-gear"/></svg></a>
+  <span class="grow"></span>
+  <a class="ri" href="#" aria-label="Feedback"><svg><use href="sprite.svg#i-msg"/></svg></a>
+</nav>
+
+<aside class="side" aria-label="Hector Brain menu">
+  <div class="shead">
+    <a class="mark-switch" href="start.html"><span data-mark></span>Hector Brain</a>
+    <button class="ib" id="collapse" aria-expanded="true" aria-label="Collapse menu (⌘.)" title="⌘."><svg><use href="sprite.svg#i-sidebar"/></svg></button>
+  </div>
+  <nav class="items" aria-label="Hector Brain">
+    <a class="item" href="start.html" data-tip="New chat  ⇧⌘O"><svg><use href="sprite.svg#i-new"/></svg><span class="lb">New chat</span><kbd>⇧⌘O</kbd></a>
+    <a class="item" href="#" data-open="search" data-tip="Search  ⌘K"><svg><use href="sprite.svg#i-search"/></svg><span class="lb">Search</span><kbd>⌘K</kbd></a>
+    <a class="item" href="workspaces.html" data-tip="Workspaces"><svg><use href="sprite.svg#i-brand"/></svg><span class="lb">Workspaces</span></a>
+    <a class="item" href="outputs.html" data-tip="Outputs"><svg><use href="sprite.svg#i-outputs"/></svg><span class="lb">Outputs</span></a>
+  </nav>
+  <section class="recent">
+    <button class="acc" aria-expanded="true" aria-controls="chatlist"><span>Chats</span><svg><use href="sprite.svg#i-chev"/></svg></button>
+    <div id="chatlist"><div class="items">
+      <a class="item" href="chat.html"><span>High-ACOS ASINs, last 30 days</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>NPD dip and high ACOS analysis</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>Competitor analysis for top search terms</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>Top and bottom 5 hero ASINs</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>Account audit: top 5 issues</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+    </div>
+    <a class="all" href="chats.html">All chats</a></div>
+  </section>
+  <span class="grow"></span>
+  <div class="items">
+    <button class="item acct" data-pop="pop-acct" data-side="right" aria-expanded="false" data-tip="Account &amp; usage"><span class="av">R</span><span class="lb">Account &amp; usage</span></button>
+  </div>
+</aside>
+
+<main>
+  <div class="top"><span class="sp"></span></div>
+
+  <div class="pg pat">
+    <div class="ph"><div><h1>Patterns</h1><p>How common interactions work in Hector Brain. Everything here is live: click to try it. Rules in docs/INTERACTIONS.md.</p></div></div>
+      <section class="card pat-sec">
+        <div><h2>Menus (⋯)</h2><p class="rule"><b>Use for:</b> actions on one thing (a chat, a workspace). Opens next to the button; <b>Esc</b> or a click outside closes it. Destructive items go last, in red, after a divider.</p></div>
+        <div class="pat-demo"><div class="row"><button class="btn secondary" data-pop="pop-chat" data-side="right">Open the chat menu</button></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Rename in place</h2><p class="rule"><b>No pop-up.</b> The name turns into a text field with the text selected. <b>Enter</b> or clicking away saves, <b>Esc</b> cancels. A toast confirms with <b>Undo</b>.</p></div>
+        <div class="pat-demo"><div class="mini rows" style="max-width:420px"><div class="rowi"><span class="t"><b>Competitor analysis for top search terms</b></span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></div><div class="rowi"><span class="t"><b>Account audit: top 5 issues</b></span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></div></div><p class="sub">Try ⋯ → Rename, or ⋯ → Pin.</p></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Confirm before deleting</h2><p class="rule"><b>Only for things that can’t be undone.</b> Name the item in the title, say what happens to related things, and put the red action on the right. Cancel is always there; Esc cancels.</p></div>
+        <div class="pat-demo"><div class="row"><button class="btn secondary" data-dialog="dlg-delete" data-name="Tampa audit report, last 7 days">Delete a chat</button></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Create something</h2><p class="rule"><b>A short dialog</b> with only what’s needed to create it (1–2 fields). The main button stays disabled until the required field is filled; <b>Enter</b> submits. Anything longer gets its own page.</p></div>
+        <div class="pat-demo"><div class="row"><button class="btn secondary" data-dialog="dlg-ws">New workspace</button><button class="btn secondary" data-dialog="dlg-method">New method</button></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Share</h2><p class="rule">One dialog: the link, <b>Copy link</b> (the button says “Copied” for a moment), and an on/off switch for link sharing.</p></div>
+        <div class="pat-demo"><div class="row"><button class="btn secondary" data-dialog="dlg-share">Share</button></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Toasts</h2><p class="rule"><b>For confirming something that just happened.</b> Bottom centre, dark, one short line. Reversible actions (pin, rename, move, archive) get <b>Undo</b> and stay 5 seconds; others leave after 2.</p></div>
+        <div class="pat-demo"><div class="row"><button class="btn secondary" data-toast="Copied">Plain toast</button><button class="btn secondary" data-do="demo-undo">Toast with Undo</button></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Tooltips</h2><p class="rule">Every icon-only button has one: dark, one to three words, shown after a short pause on hover or keyboard focus. Never put essential information only in a tooltip.</p></div>
+        <div class="pat-demo"><div class="row"><button class="ab" data-tt="Good answer" aria-label="Good answer"><svg><use href="sprite.svg#i-up"/></svg></button><button class="ab" data-tt="Copy" aria-label="Copy"><svg><use href="sprite.svg#i-copy"/></svg></button><button class="ab" data-tt="Retry" aria-label="Retry"><svg><use href="sprite.svg#i-retry"/></svg></button></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Problems that need the user</h2><p class="rule"><b>Only show colour when something is wrong.</b> Amber = needs attention, red = something failed. Say what happened, what it means, and give one button to fix it.</p></div>
+        <div class="pat-demo"><div class="alert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5L21.5 20h-19z"/><path d="M12 10v4.5"/><circle cx="12" cy="17.3" r=".5" fill="currentColor"/></svg><span>Hector Qcomm needs reconnecting. Answers won’t include its data until then.</span><span class="sp"></span><button class="btn secondary" data-toast="Opens the Hector Qcomm sign-in">Reconnect</button></div><div class="alert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5L21.5 20h-19z"/><path d="M12 10v4.5"/><circle cx="12" cy="17.3" r=".5" fill="currentColor"/></svg><span>You’re out of credits for this cycle. Credits reset on 1 Dec.</span><span class="sp"></span><a class="btn secondary" href="billing.html">Buy credits</a></div><article class="bubble failed"><h2>Hector Brain couldn’t finish this answer</h2><p>Amazon Ads didn’t respond in time. Nothing was charged.</p><div class="row"><button class="btn secondary sm" data-toast="Retrying in Standard"><svg><use href="sprite.svg#i-retry"/></svg>Try again</button></div></article></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Empty states</h2><p class="rule">Say what will appear here and give the one action that fills it. No illustrations, no jokes.</p></div>
+        <div class="pat-demo"><div class="mini"><div class="empty-state"><span class="ei"><svg><use href="sprite.svg#i-outputs"/></svg></span><b>No outputs yet</b><p>Sheets and reports Hector Brain makes for you will show up here.</p><a class="btn primary" href="start.html">Start a chat</a></div></div><div class="mini"><div class="empty-state"><span class="ei"><svg><use href="sprite.svg#i-search"/></svg></span><b>No chats match “bleed”</b><p>Try a different word, or check another workspace.</p></div></div></div>
+      </section>
+      <section class="card pat-sec">
+        <div><h2>Loading</h2><p class="rule">Lists and pages show grey placeholder lines in the shape of the content. While Hector Brain answers, use the working line: the mark moves, the status text says what it’s doing, finished steps get a tick.</p></div>
+        <div class="pat-demo"><div class="mini rows" style="max-width:420px"><div class="rowi"><span class="t" style="display:grid;gap:8px"><span class="sk t"></span><span class="sk" style="width:80%"></span></span></div><div class="rowi"><span class="t" style="display:grid;gap:8px"><span class="sk t"></span><span class="sk" style="width:65%"></span></span></div></div><div class="thinking"><span class="live wm" data-mark></span><span class="shimmer">Reading current bids for 5 ASINs</span></div></div>
+      </section>
+  </div>
+</main>
+
+<div class="pop" id="pop-acct" role="menu" aria-label="Account">
+  <a class="item" href="data-sources.html"><svg><use href="sprite.svg#i-plug"/></svg>Data sources<small>3 connected</small></a>
+  <a class="item" href="usage.html"><svg><use href="sprite.svg#i-analytics"/></svg>Usage &amp; analytics</a>
+  <a class="item" href="billing.html"><svg><use href="sprite.svg#i-credits"/></svg>Credits &amp; billing<small>1,240 left</small></a>
+  <hr>
+  <a class="item" href="preferences.html"><svg><use href="sprite.svg#i-prefs"/></svg>Preferences</a>
+</div>
+<div class="pop" id="pop-chat" role="menu" aria-label="Chat actions" style="width:220px">
+  <button class="item" data-act="pin"><svg><use href="sprite.svg#i-pinned"/></svg>Pin</button>
+  <button class="item" data-act="rename"><svg><use href="sprite.svg#i-pen"/></svg>Rename</button>
+  <button class="item" data-pop="pop-move" data-side="right"><svg><use href="sprite.svg#i-move"/></svg>Move to workspace</button>
+  <hr>
+  <button class="item danger" data-act="delete"><svg><use href="sprite.svg#i-trash"/></svg>Delete</button>
+</div>
+
+<div class="modal" id="dlg-delete" role="alertdialog" aria-modal="true" aria-labelledby="dd-t" hidden>
+  <h2 id="dd-t">Delete “<span class="nm">this chat</span>”?</h2>
+  <p>It’s removed for everyone in the workspace. Outputs it made stay in Outputs. This can’t be undone.</p>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn danger" data-do="delete">Delete</button></div>
+</div>
+<div class="modal" id="dlg-ws" role="dialog" aria-modal="true" aria-labelledby="dw-t" hidden>
+  <h2 id="dw-t">New workspace</h2>
+  <p>Group chats that share instructions and files, like a client or a campaign.</p>
+  <label class="fld"><span>Name</span><input placeholder="e.g. Tampa reporting" data-required></label>
+  <label class="fld"><span>Instructions <small>optional</small></span><textarea rows="3" placeholder="Hector Brain follows these in every chat in this workspace"></textarea></label>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-ws" disabled>Create workspace</button></div>
+</div>
+<div class="modal" id="dlg-method" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
+  <h2 id="dm-t">New method</h2>
+  <p>Write down how a job should be done. Anyone can run it by typing / and its name.</p>
+  <label class="fld"><span>Name</span><input placeholder="e.g. Dark store revenue check" data-required></label>
+  <label class="fld"><span>Instructions</span><textarea rows="6" placeholder="1. Pull sales by dark store for the last 14 days&#10;2. Compare with the 14 days before&#10;3. Flag stores down more than 15% and check stock-outs"></textarea></label>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-method" disabled>Save method</button></div>
+</div>
+<div class="modal" id="dlg-share" role="dialog" aria-modal="true" aria-labelledby="ds-t" hidden>
+  <h2 id="ds-t">Share</h2>
+  <p>Anyone at your company with the link can view it. They can’t send messages or see your other chats.</p>
+  <div class="linkrow"><input readonly value="https://app.hectorai.live/brain/share/8f3k2q" aria-label="Share link"><button class="btn secondary sm" data-do="copy-link">Copy link</button></div>
+  <div class="src-row">Link sharing on<span class="sw" role="switch" aria-checked="true" aria-label="Link sharing" style="margin-left:auto"></span></div>
+  <div class="actions"><button class="btn primary" data-close>Done</button></div>
+</div>
+<div class="pop" id="pop-move" aria-label="Move to workspace" style="width:230px">
+  <div class="label">Move to</div>
+  <div role="radiogroup" aria-label="Workspace">
+    <button class="opt" role="radio" aria-checked="true"><b>MCP Demo</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+    <button class="opt" role="radio" aria-checked="false"><b>No workspace</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+  </div>
+  <hr>
+  <button class="item" data-dialog="dlg-ws"><svg><use href="sprite.svg#i-plus"/></svg>New workspace…</button>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="dlg" id="search" role="dialog" aria-label="Search" hidden>
+  <label class="search"><svg><use href="sprite.svg#i-search"/></svg><input placeholder="Search chats and outputs" data-search="#searchList"><kbd>Esc</kbd></label>
+  <div id="searchList">
+    <div class="label">Chats</div>
+    <a class="rowi" href="chat.html" style="min-height:42px"><span class="t"><b>High-ACOS ASINs, last 30 days</b></span><span class="meta">MCP Demo · 28 Oct</span></a>
+    <a class="rowi" href="#" style="min-height:42px"><span class="t"><b>NPD dip and high ACOS analysis</b></span><span class="meta">24 Nov</span></a>
+    <a class="rowi" href="#" style="min-height:42px"><span class="t"><b>Competitor analysis for top search terms</b></span><span class="meta">17 Nov</span></a>
+    <div class="label">Outputs</div>
+    <a class="rowi" href="outputs.html" style="min-height:42px"><span class="t"><b>High-ACOS ASINs, last 30 days</b></span><span class="meta">Excel · 28 Oct</span></a>
+    <a class="rowi" href="outputs.html" style="min-height:42px"><span class="t"><b>30-day search-term bleed</b></span><span class="meta">Excel · 17 Nov</span></a>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="marks.js?v=16"></script>
+<script src="brain.js?v=16"></script>
+</body>
+</html>

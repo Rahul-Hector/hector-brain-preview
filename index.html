@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hector Brain</title>
+<link rel="icon" href="assets/favicon-brain.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root { --bg: #F7F7F5; --ink: #16151A; --muted: #6E6B7B; --line: rgba(22, 21, 26, .08); color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); background-image: radial-gradient(rgba(22, 21, 26, .065) 1px, transparent 1.2px); background-size: 22px 22px; color: var(--ink); font: 400 15px/1.55 'Inter', sans-serif; padding: 72px 24px; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { display: flex; align-items: center; gap: 12px; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; }
+  h1 img { width: 30px; height: 30px; }
+  .lede { margin-top: 10px; color: var(--muted); max-width: 36em; }
+  .card { margin-top: 32px; background: #fff; border-radius: 18px; box-shadow: 0 1px 2px rgba(22, 21, 26, .05), 0 10px 30px -14px rgba(22, 21, 26, .18), 0 0 0 1px var(--line); padding: 8px; }
+  a.row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 14px; border-radius: 12px; color: inherit; text-decoration: none; }
+  a.row + a.row { box-shadow: 0 -1px 0 var(--line); }
+  a.row:hover { background: rgba(22, 21, 26, .045); box-shadow: none; }
+  a.row b { font-weight: 500; }
+  a.row span { color: var(--muted); font-size: 13.5px; text-align: right; }
+  h2 { margin-top: 36px; font-size: 13px; font-weight: 500; color: var(--muted); }
+  .note { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
+  .note code { font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1><img src="assets/hector-mind-brain-line.svg" alt="">Hector Brain</h1>
+  <p class="lede">Hector’s in-app AI, with its own identity. This is the working version; every screen is clickable.</p>
+  <div class="card">
+    <a class="row" href="hector-brain/start.html"><b>New chat</b><span>First-time start · type / for methods</span></a>
+    <a class="row" href="hector-brain/chat.html"><b>Chat</b><span>Answer, credits, check-in, answer in progress</span></a>
+    <a class="row" href="hector-brain/chats.html"><b>All chats</b><span>Search, filter, select</span></a>
+    <a class="row" href="hector-brain/workspaces.html"><b>Workspaces</b><span>and the MCP Demo workspace</span></a>
+    <a class="row" href="hector-brain/outputs.html"><b>Outputs</b><span>Sheets and reports</span></a>
+    <a class="row" href="hector-brain/data-sources.html"><b>Data sources</b><span>Connect, turn on or off, reconnect</span></a>
+    <a class="row" href="hector-brain/usage.html"><b>Usage &amp; analytics</b><span>Credits per day</span></a>
+    <a class="row" href="hector-brain/billing.html"><b>Credits &amp; billing</b><span>Placeholder plan and prices</span></a>
+    <a class="row" href="hector-brain/patterns.html"><b>Patterns</b><span>Dialogs, rename, toasts, errors, empty, loading</span></a>
+    <a class="row" href="hector-brain/preferences.html"><b>Preferences</b><span>Methods (our Skills, run with /), Answer style</span></a>
+  </div>
+  <h2>For building it</h2>
+  <p class="note">Every interaction pattern (menus, rename in place, confirm dialogs, toasts with Undo, errors, empty and loading states) is on the <a href="hector-brain/patterns.html" style="color:var(--ink)">Patterns</a> page. Rules: <code>CLAUDE.md</code> and <code>docs/</code>.</p>
+</div>
+</body>
+</html>

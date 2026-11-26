@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hector Brain — chats</title>
+<link rel="icon" href="../assets/favicon-brain.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="rail.css">
+<link rel="stylesheet" href="brain.css?v=16">
+<script>try{if(localStorage.getItem('hm-d-collapsed')==='1')document.documentElement.classList.add('collapsed')}catch(e){}</script>
+</head>
+<body>
+<nav class="rail" aria-label="Hector modules">
+  <a class="logo" href="../index.html" aria-label="Hector home"><img src="../assets/logomark.svg" alt=""></a>
+  <a class="ri" href="#" aria-label="Amazon"><svg><use href="sprite.svg#i-amz"/></svg></a>
+  <a class="ri" href="#" aria-label="Flipkart"><span class="letter" style="font-style:italic">f</span></a>
+  <a class="ri" href="#" aria-label="Myntra"><span class="letter">M</span></a>
+  <a class="ri" href="#" aria-label="Blinkit"><span class="letter" style="font-style:italic">b</span></a>
+  <a class="ri" href="#" aria-label="Instamart"><svg><use href="sprite.svg#i-pin"/></svg></a>
+  <a class="ri" href="#" aria-label="Zepto"><span class="letter">z</span></a>
+  <a class="ri" href="#" aria-label="Docs"><svg><use href="sprite.svg#i-book"/></svg></a>
+  <a class="ri active" href="start.html" aria-label="Hector Brain" aria-current="page"><svg><use href="sprite.svg#rail-brain"/></svg></a>
+  <a class="ri" href="#" aria-label="Settings"><svg><use href="sprite.svg#i-gear"/></svg></a>
+  <span class="grow"></span>
+  <a class="ri" href="#" aria-label="Feedback"><svg><use href="sprite.svg#i-msg"/></svg></a>
+</nav>
+
+<aside class="side" aria-label="Hector Brain menu">
+  <div class="shead">
+    <a class="mark-switch" href="start.html"><span data-mark></span>Hector Brain</a>
+    <button class="ib" id="collapse" aria-expanded="true" aria-label="Collapse menu (⌘.)" title="⌘."><svg><use href="sprite.svg#i-sidebar"/></svg></button>
+  </div>
+  <nav class="items" aria-label="Hector Brain">
+    <a class="item" href="start.html" data-tip="New chat  ⇧⌘O"><svg><use href="sprite.svg#i-new"/></svg><span class="lb">New chat</span><kbd>⇧⌘O</kbd></a>
+    <a class="item" href="#" data-open="search" data-tip="Search  ⌘K"><svg><use href="sprite.svg#i-search"/></svg><span class="lb">Search</span><kbd>⌘K</kbd></a>
+    <a class="item" href="workspaces.html" data-tip="Workspaces"><svg><use href="sprite.svg#i-brand"/></svg><span class="lb">Workspaces</span></a>
+    <a class="item" href="outputs.html" data-tip="Outputs"><svg><use href="sprite.svg#i-outputs"/></svg><span class="lb">Outputs</span></a>
+  </nav>
+  <section class="recent">
+    <button class="acc" aria-expanded="true" aria-controls="chatlist"><span>Chats</span><svg><use href="sprite.svg#i-chev"/></svg></button>
+    <div id="chatlist"><div class="items">
+      <a class="item" href="chat.html"><span>High-ACOS ASINs, last 30 days</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>NPD dip and high ACOS analysis</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>Competitor analysis for top search terms</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>Top and bottom 5 hero ASINs</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="item" href="#"><span>Account audit: top 5 issues</span><button class="more" data-pop="pop-chat" data-side="right" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+    </div>
+    <a class="all on" href="chats.html">All chats</a></div>
+  </section>
+  <span class="grow"></span>
+  <div class="items">
+    <button class="item acct" data-pop="pop-acct" data-side="right" aria-expanded="false" data-tip="Account &amp; usage"><span class="av">R</span><span class="lb">Account &amp; usage</span></button>
+  </div>
+</aside>
+
+<main>
+  <div class="top"><span class="sp"></span></div>
+
+  <div class="pg">
+    <div class="ph"><div><h1>Chats</h1><p>Every chat across your workspaces.</p></div><span class="sp"></span><a class="btn primary" href="start.html"><svg><use href="sprite.svg#i-new"/></svg>New chat</a></div>
+    <div class="toolbar">
+      <label class="field-s"><svg><use href="sprite.svg#i-search"/></svg><input placeholder="Search chats" data-search="#clist"></label>
+      <button class="btn secondary" data-pop="pop-wsf"><span class="wsfLbl">All workspaces</span><svg><use href="sprite.svg#i-chev"/></svg></button>
+      <span class="sp"></span>
+      <button class="btn secondary" id="selectBtn"><svg><use href="sprite.svg#i-check"/></svg>Select</button>
+    </div>
+    <div class="selbar" id="selbar" hidden><span id="selCount">0 selected</span><span class="sp"></span><button data-toast="Move to workspace">Move to workspace</button><button data-dialog="dlg-delete" data-name="the selected chats">Delete</button><button id="selCancel">Cancel</button></div>
+    <div class="card rows" id="clist">
+      <div class="month">November</div>
+      <a class="rowi" href="#" data-state="none"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>NPD dip and high ACOS analysis</b></span><span class="meta">24 Nov</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="rowi" href="#" data-state="none"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>Competitor analysis for top search terms</b></span><span class="meta">17 Nov</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <div class="month">October</div>
+      <a class="rowi" href="chat.html" data-state="mcp"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>High-ACOS ASINs, last 30 days</b></span><span class="tagw">MCP Demo</span><span class="meta">28 Oct</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="rowi" href="#" data-state="none"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>Top and bottom 5 hero ASINs</b></span><span class="meta">15 Oct</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <div class="month">September</div>
+      <a class="rowi" href="#" data-state="none"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>Account audit: top 5 issues</b></span><span class="meta">18 Sep</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <div class="month">August</div>
+      <a class="rowi" href="#" data-state="mcp"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>Tampa audit report, last 7 days</b></span><span class="tagw">MCP Demo</span><span class="meta">31 Aug</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="rowi" href="#" data-state="none"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>Tampa data, last 30 days</b></span><span class="meta">31 Aug</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <a class="rowi" href="#" data-state="none"><span class="ck"><svg><use href="sprite.svg#i-check"/></svg></span><span class="t"><b>Untitled chat</b></span><span class="meta">5 Aug</span><button class="ib" data-pop="pop-chat" data-side="left" aria-label="Chat actions"><svg><use href="sprite.svg#i-more"/></svg></button></a>
+      <p class="empty-s" id="noResults" hidden>No chats match. Try a different word or workspace.</p>
+    </div>
+  </div>
+</main>
+
+<div class="pop" id="pop-acct" role="menu" aria-label="Account">
+  <a class="item" href="data-sources.html"><svg><use href="sprite.svg#i-plug"/></svg>Data sources<small>3 connected</small></a>
+  <a class="item" href="usage.html"><svg><use href="sprite.svg#i-analytics"/></svg>Usage &amp; analytics</a>
+  <a class="item" href="billing.html"><svg><use href="sprite.svg#i-credits"/></svg>Credits &amp; billing<small>1,240 left</small></a>
+  <hr>
+  <a class="item" href="preferences.html"><svg><use href="sprite.svg#i-prefs"/></svg>Preferences</a>
+</div>
+<div class="pop" id="pop-chat" role="menu" aria-label="Chat actions" style="width:220px">
+  <button class="item" data-act="pin"><svg><use href="sprite.svg#i-pinned"/></svg>Pin</button>
+  <button class="item" data-act="rename"><svg><use href="sprite.svg#i-pen"/></svg>Rename</button>
+  <button class="item" data-pop="pop-move" data-side="right"><svg><use href="sprite.svg#i-move"/></svg>Move to workspace</button>
+  <hr>
+  <button class="item danger" data-act="delete"><svg><use href="sprite.svg#i-trash"/></svg>Delete</button>
+</div>
+
+<div class="pop" id="pop-wsf" aria-label="Filter by workspace" style="width:220px">
+  <div role="radiogroup" aria-label="Workspace" data-label=".wsfLbl" data-filter="#clist">
+    <button class="opt" role="radio" aria-checked="true" data-f="all"><b>All workspaces</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+    <button class="opt" role="radio" aria-checked="false" data-f="mcp"><b>MCP Demo</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+    <button class="opt" role="radio" aria-checked="false" data-f="none"><b>No workspace</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+  </div>
+</div>
+
+<div class="modal" id="dlg-delete" role="alertdialog" aria-modal="true" aria-labelledby="dd-t" hidden>
+  <h2 id="dd-t">Delete “<span class="nm">this chat</span>”?</h2>
+  <p>It’s removed for everyone in the workspace. Outputs it made stay in Outputs. This can’t be undone.</p>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn danger" data-do="delete">Delete</button></div>
+</div>
+<div class="modal" id="dlg-ws" role="dialog" aria-modal="true" aria-labelledby="dw-t" hidden>
+  <h2 id="dw-t">New workspace</h2>
+  <p>Group chats that share instructions and files, like a client or a campaign.</p>
+  <label class="fld"><span>Name</span><input placeholder="e.g. Tampa reporting" data-required></label>
+  <label class="fld"><span>Instructions <small>optional</small></span><textarea rows="3" placeholder="Hector Brain follows these in every chat in this workspace"></textarea></label>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-ws" disabled>Create workspace</button></div>
+</div>
+<div class="modal" id="dlg-method" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
+  <h2 id="dm-t">New method</h2>
+  <p>Write down how a job should be done. Anyone can run it by typing / and its name.</p>
+  <label class="fld"><span>Name</span><input placeholder="e.g. Dark store revenue check" data-required></label>
+  <label class="fld"><span>Instructions</span><textarea rows="6" placeholder="1. Pull sales by dark store for the last 14 days&#10;2. Compare with the 14 days before&#10;3. Flag stores down more than 15% and check stock-outs"></textarea></label>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-method" disabled>Save method</button></div>
+</div>
+<div class="modal" id="dlg-share" role="dialog" aria-modal="true" aria-labelledby="ds-t" hidden>
+  <h2 id="ds-t">Share</h2>
+  <p>Anyone at your company with the link can view it. They can’t send messages or see your other chats.</p>
+  <div class="linkrow"><input readonly value="https://app.hectorai.live/brain/share/8f3k2q" aria-label="Share link"><button class="btn secondary sm" data-do="copy-link">Copy link</button></div>
+  <div class="src-row">Link sharing on<span class="sw" role="switch" aria-checked="true" aria-label="Link sharing" style="margin-left:auto"></span></div>
+  <div class="actions"><button class="btn primary" data-close>Done</button></div>
+</div>
+<div class="pop" id="pop-move" aria-label="Move to workspace" style="width:230px">
+  <div class="label">Move to</div>
+  <div role="radiogroup" aria-label="Workspace">
+    <button class="opt" role="radio" aria-checked="true"><b>MCP Demo</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+    <button class="opt" role="radio" aria-checked="false"><b>No workspace</b><svg class="ck"><use href="sprite.svg#i-check"/></svg></button>
+  </div>
+  <hr>
+  <button class="item" data-dialog="dlg-ws"><svg><use href="sprite.svg#i-plus"/></svg>New workspace…</button>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="dlg" id="search" role="dialog" aria-label="Search" hidden>
+  <label class="search"><svg><use href="sprite.svg#i-search"/></svg><input placeholder="Search chats and outputs" data-search="#searchList"><kbd>Esc</kbd></label>
+  <div id="searchList">
+    <div class="label">Chats</div>
+    <a class="rowi" href="chat.html" style="min-height:42px"><span class="t"><b>High-ACOS ASINs, last 30 days</b></span><span class="meta">MCP Demo · 28 Oct</span></a>
+    <a class="rowi" href="#" style="min-height:42px"><span class="t"><b>NPD dip and high ACOS analysis</b></span><span class="meta">24 Nov</span></a>
+    <a class="rowi" href="#" style="min-height:42px"><span class="t"><b>Competitor analysis for top search terms</b></span><span class="meta">17 Nov</span></a>
+    <div class="label">Outputs</div>
+    <a class="rowi" href="outputs.html" style="min-height:42px"><span class="t"><b>High-ACOS ASINs, last 30 days</b></span><span class="meta">Excel · 28 Oct</span></a>
+    <a class="rowi" href="outputs.html" style="min-height:42px"><span class="t"><b>30-day search-term bleed</b></span><span class="meta">Excel · 17 Nov</span></a>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="marks.js?v=16"></script>
+<script src="brain.js?v=16"></script>
+</body>
+</html>

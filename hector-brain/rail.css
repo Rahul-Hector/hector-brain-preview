@@ -1,0 +1,10 @@
+/* The existing Hector module rail, unchanged in every direction: it belongs to the host product, not to Hector Mind. */
+.rail { position: fixed; inset: 0 auto 0 0; width: 56px; background: #1B1340; display: flex; flex-direction: column; align-items: center; padding: 12px 0; gap: 2px; z-index: 40; }
+.rail .logo { width: 30px; height: 30px; margin-bottom: 12px; display: grid; place-items: center; }
+.rail .logo img { width: 24px; height: 27px; }
+.ri { position: relative; width: 40px; height: 38px; border-radius: 10px; color: rgba(242, 241, 246, .62); display: grid; place-items: center; text-decoration: none; }
+.ri:hover { background: rgba(255, 255, 255, .07); color: #fff; }
+.ri.active { background: #7C3AED; color: #fff; }
+.ri svg { width: 20px; height: 20px; }
+.ri .letter { font: 800 17px/1 'Inter', sans-serif; letter-spacing: -0.04em; }
+.rail .grow { flex: 1; }
