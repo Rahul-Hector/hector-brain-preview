@@ -118,7 +118,7 @@
   $$('[data-search]').forEach(function (inp) {
     inp.addEventListener('input', function () {
       var q = inp.value.trim().toLowerCase(), shown = 0;
-      $$(inp.dataset.search + ' .rowi').forEach(function (r) { var hit = !q || r.textContent.toLowerCase().indexOf(q) > -1; r.hidden = !hit; if (hit) shown++; });
+      $$(inp.dataset.search + ' .rowi, ' + inp.dataset.search + ' .ocard').forEach(function (r) { var hit = !q || r.textContent.toLowerCase().indexOf(q) > -1; r.hidden = !hit; if (hit) shown++; });
       $$(inp.dataset.search + ' .month').forEach(function (m) { var n = m.nextElementSibling, any = false; while (n && !n.classList.contains('month')) { if (!n.hidden) any = true; n = n.nextElementSibling; } m.hidden = !any; });
       var em = $('#noResults'); if (em) em.hidden = shown > 0;
     });
@@ -296,5 +296,16 @@
     var o = e.target.closest('[role="radio"]'); if (!o) return;
     var name = $('b', o).textContent;
     setTimeout(function () { HM.toast('Moved to ' + name, function () {}); }, 140);
+  });
+  // ---------- View switch (list / cards), remembered per page: .tabs[data-views] with buttons [data-view]
+  $$('.tabs[data-views]').forEach(function (bar) {
+    var box = $(bar.dataset.views), key = bar.dataset.key;
+    function setView(v) {
+      box.classList.toggle('view-grid', v === 'grid');
+      $$('[data-view]', bar).forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.view === v)); });
+      if (key) store(key, v);
+    }
+    bar.addEventListener('click', function (e) { var b = e.target.closest('[data-view]'); if (b) setView(b.dataset.view); });
+    setView(key && store(key) === 'grid' ? 'grid' : 'list');
   });
 })();

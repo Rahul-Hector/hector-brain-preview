@@ -8,7 +8,7 @@
 <link rel="icon" href="../assets/favicon-brain.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="rail.css">
-<link rel="stylesheet" href="brain.css?v=16">
+<link rel="stylesheet" href="brain.css?v=21">
 <script>try{if(localStorage.getItem('hm-d-collapsed')==='1')document.documentElement.classList.add('collapsed')}catch(e){}</script>
 </head>
 <body>
@@ -60,11 +60,34 @@
 
   <div class="pg">
     <div class="ph"><div><h1>Outputs</h1><p>Sheets and reports Hector Brain made for you.</p></div><span class="sp"></span>
-      <label class="field-s"><svg><use href="sprite.svg#i-search"/></svg><input placeholder="Search outputs" data-search="#olist"></label></div>
-    <div class="card rows" id="olist">
-      <div class="rowi"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>High-ACOS ASINs, last 30 days</b><small>Excel · 50 rows · from “High-ACOS ASINs, last 30 days”</small></span><span class="meta">28 Oct</span><button class="btn secondary sm" data-open="sheet">Open</button><button class="ib" aria-label="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
-      <div class="rowi"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>30-day search-term bleed</b><small>Excel · from “Competitor analysis for top search terms”</small></span><span class="meta">17 Nov</span><button class="btn secondary sm" data-open="sheet">Open</button><button class="ib" aria-label="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
-      <div class="rowi"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>Search term &amp; targeting, last 7 days</b><small>Excel · from “Tampa audit report, last 7 days”</small></span><span class="meta">31 Aug</span><button class="btn secondary sm" data-open="sheet">Open</button><button class="ib" aria-label="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+      <label class="field-s"><svg><use href="sprite.svg#i-search"/></svg><input placeholder="Search outputs" data-search="#outs"></label>
+      <div class="tabs vt" role="tablist" aria-label="View" data-views="#outs" data-key="hb-outputs-view">
+        <button role="tab" aria-selected="true" data-view="list" aria-label="List view" data-tt="List"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6.5h11M9 12h11M9 17.5h11"/><circle cx="4.8" cy="6.5" r=".9" fill="currentColor"/><circle cx="4.8" cy="12" r=".9" fill="currentColor"/><circle cx="4.8" cy="17.5" r=".9" fill="currentColor"/></svg></button>
+        <button role="tab" aria-selected="false" data-view="grid" aria-label="Card view" data-tt="Cards"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg></button>
+      </div></div>
+    <div id="outs" class="views">
+      <div class="card rows v-list">
+        <div class="rowi"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>High-ACOS ASINs, last 30 days</b><small>Excel · 50 rows · from “High-ACOS ASINs, last 30 days”</small></span><span class="meta">28 Oct</span><button class="btn secondary sm" data-open="sheet">Open</button><button class="ib" aria-label="Download" data-tt="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+        <div class="rowi"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>30-day search-term bleed</b><small>Excel · 38 rows · from “Competitor analysis for top search terms”</small></span><span class="meta">17 Nov</span><button class="btn secondary sm" data-open="sheet">Open</button><button class="ib" aria-label="Download" data-tt="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+        <div class="rowi"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>Search term &amp; targeting, last 7 days</b><small>Excel · 120 rows · from “Tampa audit report, last 7 days”</small></span><span class="meta">31 Aug</span><button class="btn secondary sm" data-open="sheet">Open</button><button class="ib" aria-label="Download" data-tt="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+      </div>
+      <div class="ogrid v-grid">
+        <article class="ocard">
+          <button class="ocard-open" data-open="sheet" aria-label="Open High-ACOS ASINs, last 30 days"><span class="snap" aria-hidden="true"><span class="snap-t">Tampa: High-ACOS ASIN report</span><table><thead><tr><th>ASIN</th><th>Spend</th><th>ACOS</th></tr></thead><tbody><tr><td>B0GCJDQQHP</td><td>₹10,784</td><td>1,616.9%</td></tr><tr><td>B0HKZB4217</td><td>₹5,673</td><td>995.4%</td></tr><tr><td>B0H26KDW9D</td><td>₹9,521</td><td>767.8%</td></tr><tr><td>B0HL4VG865</td><td>₹5,107</td><td>496.8%</td></tr><tr><td>B0HL4QP1D3</td><td>₹5,524</td><td>369.7%</td></tr><tr><td>B0HKZ4Z3T5</td><td>₹6,347</td><td>300.4%</td></tr></tbody></table></span></button>
+          <div class="ocard-b"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>High-ACOS ASINs, last 30 days</b><small>Excel · 50 rows · 28 Oct</small></span>
+            <button class="ib" aria-label="Download" data-tt="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+        </article>
+        <article class="ocard">
+          <button class="ocard-open" data-open="sheet" aria-label="Open 30-day search-term bleed"><span class="snap" aria-hidden="true"><span class="snap-t">Search terms with spend and no sales</span><table><thead><tr><th>Search term</th><th>Spend</th><th>Orders</th></tr></thead><tbody><tr><td>face wash for men</td><td>₹4,210</td><td>0</td></tr><tr><td>vitamin c serum</td><td>₹3,880</td><td>0</td></tr><tr><td>sunscreen spf 50</td><td>₹3,140</td><td>0</td></tr><tr><td>charcoal face wash</td><td>₹2,960</td><td>0</td></tr><tr><td>night cream</td><td>₹2,410</td><td>0</td></tr><tr><td>under eye gel</td><td>₹1,980</td><td>0</td></tr></tbody></table></span></button>
+          <div class="ocard-b"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>30-day search-term bleed</b><small>Excel · 38 rows · 17 Nov</small></span>
+            <button class="ib" aria-label="Download" data-tt="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+        </article>
+        <article class="ocard">
+          <button class="ocard-open" data-open="sheet" aria-label="Open Search term &amp; targeting, last 7 days"><span class="snap" aria-hidden="true"><span class="snap-t">Search term and targeting, Tampa</span><table><thead><tr><th>Search term</th><th>Impr.</th><th>ACOS</th></tr></thead><tbody><tr><td>face wash</td><td>1.2L</td><td>38.1%</td></tr><tr><td>facewash oily skin</td><td>64,210</td><td>29.4%</td></tr><tr><td>neem face wash</td><td>41,880</td><td>44.0%</td></tr><tr><td>men face wash</td><td>38,020</td><td>52.7%</td></tr><tr><td>gentle cleanser</td><td>22,410</td><td>24.9%</td></tr><tr><td>foaming cleanser</td><td>18,960</td><td>33.2%</td></tr></tbody></table></span></button>
+          <div class="ocard-b"><span class="fi"><svg><use href="sprite.svg#i-table"/></svg></span><span class="t"><b>Search term &amp; targeting, last 7 days</b><small>Excel · 120 rows · 31 Aug</small></span>
+            <button class="ib" aria-label="Download" data-tt="Download" data-toast="Downloads the file"><svg><use href="sprite.svg#i-download"/></svg></button></div>
+        </article>
+      </div>
       <p class="empty-s" id="noResults" hidden>No outputs match.</p>
     </div>
   </div>
@@ -166,7 +189,7 @@ B0H26BJL5N,5816,2701,3,215.3,1.02%</div>
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<script src="marks.js?v=16"></script>
-<script src="brain.js?v=16"></script>
+<script src="marks.js?v=21"></script>
+<script src="brain.js?v=21"></script>
 </body>
 </html>
