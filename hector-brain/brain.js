@@ -308,4 +308,23 @@
     bar.addEventListener('click', function (e) { var b = e.target.closest('[data-view]'); if (b) setView(b.dataset.view); });
     setView(key && store(key) === 'grid' ? 'grid' : 'list');
   });
+  // ---------- Your messages: Edit in place (Send re-runs the chat from here), Esc or Cancel restores
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-msg="edit"]'); if (!b) return;
+    var me = $('.me', b.closest('.mwrap')); if (me.classList.contains('editing')) return;
+    var old = me.textContent;
+    me.classList.add('editing');
+    me.innerHTML = '<textarea aria-label="Edit your message"></textarea><div class="row"><button class="btn secondary sm" data-msg="cancel">Cancel</button><button class="btn primary sm" data-msg="send">Send</button></div>';
+    var ta = $('textarea', me); ta.value = old; ta.focus(); ta.setSelectionRange(old.length, old.length);
+    function done(text) { me.classList.remove('editing'); me.textContent = text; }
+    me.addEventListener('click', function h(ev) {
+      var c = ev.target.closest('[data-msg]'); if (!c) return;
+      if (c.dataset.msg === 'cancel') { done(old); me.removeEventListener('click', h); }
+      if (c.dataset.msg === 'send') { var v = ta.value.trim() || old; done(v); me.removeEventListener('click', h); HM.toast('Sent. Hector Brain answers again from here; the answers below are replaced.'); }
+    });
+    ta.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape') { ev.stopPropagation(); done(old); }
+      if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); $('[data-msg="send"]', me).click(); }
+    });
+  });
 })();
