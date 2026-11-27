@@ -8,7 +8,7 @@
 <link rel="icon" href="../assets/favicon-brain.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="rail.css">
-<link rel="stylesheet" href="brain.css?v=21">
+<link rel="stylesheet" href="brain.css?v=22">
 <script>try{if(localStorage.getItem('hm-d-collapsed')==='1')document.documentElement.classList.add('collapsed')}catch(e){}</script>
 </head>
 <body>
@@ -60,11 +60,11 @@
 
   <div class="pg" id="prefs">
     <div class="ph"><div><h1>Preferences</h1><p>How Hector Brain works for you. Data sources have <a href="data-sources.html" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px">their own page</a>.</p></div></div>
-    <div class="toolbar"><div class="tabs" role="tablist" data-panes="#prefs"><button role="tab" aria-selected="true" data-pane="play">Methods</button><button role="tab" aria-selected="false" data-pane="style">Answer style</button></div>
-      <span class="sp"></span><button class="btn primary" data-pop="pop-newplay" data-side="left"><svg><use href="sprite.svg#i-plus"/></svg>New method</button></div>
+    <div class="toolbar"><div class="tabs" role="tablist" data-panes="#prefs"><button role="tab" aria-selected="true" data-pane="play">Workflows</button><button role="tab" aria-selected="false" data-pane="style">Answer style</button></div>
+      <span class="sp"></span><button class="btn primary" data-pop="pop-newplay" data-side="left"><svg><use href="sprite.svg#i-plus"/></svg>New workflow</button></div>
     <section class="pane" data-pane="play">
       <div class="explain">
-        <div class="hrow"><b>A method is a how-to you write once</b><span class="sp"></span><span class="namehint"><button class="nh-btn" aria-label="Other names for Methods" aria-describedby="nh1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="7.8" r=".6" fill="currentColor"/></svg></button><span class="nh-card" role="tooltip" id="nh1"><span class="nh-h">Other names for Methods</span><span class="nh-row"><b>Protocols</b>Tested steps, followed precisely. Fits “Brain”; overlaps with MCP.</span><span class="nh-row"><b>Frameworks</b>Consulting-grade and familiar in business meetings.</span><span class="nh-row"><b>Workflows</b>Safe and familiar, but generic; sounds automated.</span><span class="nh-row"><b>Abilities</b>Closest to “Skills”; slightly game-like.</span><span class="nh-row"><b>Reflexes</b>Ownable with “Brain”; needs a line of explanation.</span><span class="nh-out">Ruled out: Playbooks (doesn’t say what it is), Recipes (too casual)</span></span></span></div>
+        <div class="hrow"><b>A workflow is a how-to you write once</b></div>
         <p>Write down how a job should be done, like a checklist, a report format or an audit. Anyone on your team can run it by typing <kbd>/</kbd> and its name in the message box, and Hector Brain also uses it on its own when a question fits.</p>
       </div>
       <div class="card rows">
@@ -107,10 +107,10 @@
   <button class="item danger" data-act="delete"><svg><use href="sprite.svg#i-trash"/></svg>Delete</button>
 </div>
 
-<div class="pop" id="pop-newplay" role="menu" aria-label="New method" style="width:270px">
+<div class="pop" id="pop-newplay" role="menu" aria-label="New workflow" style="width:270px">
   <button class="opt" data-toast="Describe the task, Hector Brain drafts it"><b>Create with Hector Brain</b><span>Describe the task, Hector Brain drafts it</span></button>
-  <button class="opt" data-dialog="dlg-method"><b>Write instructions</b><span>Start from a blank method</span></button>
-  <button class="opt" data-toast="Upload a .md or .zip file"><b>Upload a method</b><span>A .md or .zip file</span></button>
+  <button class="opt" data-dialog="dlg-workflow"><b>Write instructions</b><span>Start from a blank workflow</span></button>
+  <button class="opt" data-toast="Upload a .md or .zip file"><b>Upload a workflow</b><span>A .md or .zip file</span></button>
 </div>
 
 <div class="modal" id="dlg-delete" role="alertdialog" aria-modal="true" aria-labelledby="dd-t" hidden>
@@ -125,12 +125,12 @@
   <label class="fld"><span>Instructions <small>optional</small></span><textarea rows="3" placeholder="Hector Brain follows these in every chat in this workspace"></textarea></label>
   <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-ws" disabled>Create workspace</button></div>
 </div>
-<div class="modal" id="dlg-method" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
-  <h2 id="dm-t">New method</h2>
+<div class="modal" id="dlg-workflow" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
+  <h2 id="dm-t">New workflow</h2>
   <p>Write down how a job should be done. Anyone can run it by typing / and its name.</p>
   <label class="fld"><span>Name</span><input placeholder="e.g. Dark store revenue check" data-required></label>
   <label class="fld"><span>Instructions</span><textarea rows="6" placeholder="1. Pull sales by dark store for the last 14 days&#10;2. Compare with the 14 days before&#10;3. Flag stores down more than 15% and check stock-outs"></textarea></label>
-  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-method" disabled>Save method</button></div>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-workflow" disabled>Save workflow</button></div>
 </div>
 <div class="modal" id="dlg-share" role="dialog" aria-modal="true" aria-labelledby="ds-t" hidden>
   <h2 id="ds-t">Share</h2>
@@ -163,8 +163,8 @@
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<script src="marks.js?v=21"></script>
-<script src="brain.js?v=21"></script>
+<script src="marks.js?v=22"></script>
+<script src="brain.js?v=22"></script>
 <script>if (location.hash === "#style") document.querySelector('[data-pane="style"][role="tab"]').click();</script>
 </body>
 </html>

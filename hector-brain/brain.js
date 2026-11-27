@@ -154,7 +154,7 @@
     if (b) { rate.classList.add('done'); rate.innerHTML = '<span class="rate-q">Thanks, that helps Hector Brain get better.</span>'; setTimeout(rateGone, 1800); return; }
     if (e.target.closest('.rate-x')) rateGone();
   });
-  // ---------- "/" in the message box lists methods (our Skills); type to filter, up/down + Enter to pick, Esc to close
+  // ---------- "/" in the message box lists workflows (our Skills); type to filter, up/down + Enter to pick, Esc to close
   var slash = $('#pop-slash');
   if (slash) {
     var opts = $$('.opt', slash), none = $('.none', slash), box = null, act = -1;
@@ -174,7 +174,7 @@
       var t = box, end = t.selectionStart, start = t.value.slice(0, end).lastIndexOf('/');
       t.value = t.value.slice(0, start) + '/' + o.dataset.slash + ' ' + t.value.slice(end);
       var c = start + o.dataset.slash.length + 2; t.setSelectionRange(c, c); t.focus(); closeSlash();
-      HM.toast('Method /' + o.dataset.slash + ' will run with this message');
+      HM.toast('Workflow /' + o.dataset.slash + ' will run with this message');
     }
     $$('.tray textarea').forEach(function (t) {
       t.addEventListener('input', function () { var q = token(t); if (q === null) closeSlash(); else openSlash(t, q); });
@@ -280,7 +280,7 @@
         if (r && !r.classList.contains('on')) { r.hidden = true; HM.toast('Deleted', function () { r.hidden = false; }); }
         else HM.toast('Deleted. In the app this opens a new chat.');
       } else if (what === 'demo-undo') { HM.toast('Moved to MCP Demo', function () {}); } else if (what === 'create-ws') { hideLayer(); HM.toast('Workspace created'); }
-      else if (what === 'create-method') { hideLayer(); HM.toast('Method saved. Type / to run it.'); }
+      else if (what === 'create-workflow') { hideLayer(); HM.toast('Workflow saved. Type / to run it.'); }
       else if (what === 'copy-link') {
         var inp = $('.linkrow input', d.closest('.modal'));
         try { navigator.clipboard.writeText(inp.value).catch(function () {}); } catch (err) {}

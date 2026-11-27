@@ -8,7 +8,7 @@
 <link rel="icon" href="../assets/favicon-brain.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="rail.css">
-<link rel="stylesheet" href="brain.css?v=21">
+<link rel="stylesheet" href="brain.css?v=22">
 <script>try{if(localStorage.getItem('hm-d-collapsed')==='1')document.documentElement.classList.add('collapsed')}catch(e){}</script>
 </head>
 <body>
@@ -64,9 +64,9 @@
       <button class="btn secondary" data-dialog="dlg-share"><svg><use href="sprite.svg#i-share"/></svg>Share</button>
       <button class="btn secondary" data-pop="pop-wsmore" data-side="left" aria-label="More" style="width:36px;padding:0;justify-content:center"><svg><use href="sprite.svg#i-more"/></svg></button></div>
     <div class="mini-tray"><div class="tray">
-      <textarea placeholder="Start a chat in MCP Demo, or type / for a method" aria-label="Start a chat in MCP Demo, or type / for a method"></textarea>
+      <textarea placeholder="Start a chat in MCP Demo, or type / for a workflow" aria-label="Start a chat in MCP Demo, or type / for a workflow"></textarea>
       <div class="row">
-        <button class="tb round" data-pop="pop-add" data-side="below" aria-label="Add files, methods, style or sources"><svg><use href="sprite.svg#i-plus"/></svg></button>
+        <button class="tb round" data-pop="pop-add" data-side="below" aria-label="Add files, workflows, style or sources"><svg><use href="sprite.svg#i-plus"/></svg></button>
         <button class="tb" data-pop="pop-src" data-side="below" data-tt="Data sources for this chat"><img src="../assets/platforms/amazon.png" alt="">3 sources</button>
         <button class="tb" data-pop="pop-mode" data-side="below" data-tt="Answer depth"><span class="modeLbl">Standard</span><svg><use href="sprite.svg#i-chev"/></svg></button>
         <span class="sp"></span>
@@ -107,7 +107,7 @@
 
 <div class="pop" id="pop-add" role="menu" aria-label="Add to this chat">
   <button class="item" data-toast="Opens the file picker"><svg><use href="sprite.svg#i-plus"/></svg>Add files or photos</button>
-  <button class="item" data-pop="pop-play" data-side="right"><svg><use href="sprite.svg#i-book"/></svg>Methods<svg class="chev-r"><use href="sprite.svg#i-chev"/></svg></button>
+  <button class="item" data-pop="pop-play" data-side="right"><svg><use href="sprite.svg#i-book"/></svg>Workflows<svg class="chev-r"><use href="sprite.svg#i-chev"/></svg></button>
   <button class="item" data-pop="pop-style" data-side="right"><svg><use href="sprite.svg#i-pen"/></svg>Answer style<svg class="chev-r"><use href="sprite.svg#i-chev"/></svg></button>
   <button class="item" data-pop="pop-src" data-side="right"><svg><use href="sprite.svg#i-plug"/></svg>Data sources<svg class="chev-r"><use href="sprite.svg#i-chev"/></svg></button>
 </div>
@@ -121,25 +121,25 @@
   <hr>
   <a class="item" href="preferences.html#style"><svg><use href="sprite.svg#i-pen"/></svg>Edit custom style</a>
 </div>
-<div class="pop" id="pop-play" aria-label="Methods">
-  <div class="hrow pop-h"><span class="label">Methods</span><span class="sp"></span><span class="namehint up"><button class="nh-btn" aria-label="Other names for Methods" aria-describedby="nh2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="7.8" r=".6" fill="currentColor"/></svg></button><span class="nh-card" role="tooltip" id="nh2"><span class="nh-h">Other names for Methods</span><span class="nh-row"><b>Protocols</b>Tested steps, followed precisely. Fits “Brain”; overlaps with MCP.</span><span class="nh-row"><b>Frameworks</b>Consulting-grade and familiar in business meetings.</span><span class="nh-row"><b>Workflows</b>Safe and familiar, but generic; sounds automated.</span><span class="nh-row"><b>Abilities</b>Closest to “Skills”; slightly game-like.</span><span class="nh-row"><b>Reflexes</b>Ownable with “Brain”; needs a line of explanation.</span><span class="nh-out">Ruled out: Playbooks (doesn’t say what it is), Recipes (too casual)</span></span></span></div>
+<div class="pop" id="pop-play" aria-label="Workflows">
+  <div class="hrow pop-h"><span class="label">Workflows</span></div>
   <p class="hint">Written instructions Hector Brain follows step by step. Tip: type / in the message box to run one.</p>
   <button class="item" data-toast="Running /weekly-bleed-check in this chat"><svg><use href="sprite.svg#i-book"/></svg>/weekly-bleed-check</button>
   <button class="item" data-toast="Running /acos-audit in this chat"><svg><use href="sprite.svg#i-book"/></svg>/acos-audit</button>
   <button class="item" data-toast="Running /stock-and-buy-box in this chat"><svg><use href="sprite.svg#i-book"/></svg>/stock-and-buy-box</button>
   <hr>
-  <a class="item" href="preferences.html"><svg><use href="sprite.svg#i-plus"/></svg>Create a method</a>
+  <a class="item" href="preferences.html"><svg><use href="sprite.svg#i-plus"/></svg>Create a workflow</a>
 </div>
-<div class="pop slash" id="pop-slash" role="listbox" aria-label="Methods">
-  <div class="label">Methods</div>
+<div class="pop slash" id="pop-slash" role="listbox" aria-label="Workflows">
+  <div class="label">Workflows</div>
   <button class="opt" role="option" data-slash="weekly-bleed-check"><b>/weekly-bleed-check</b><span>Finds search terms that spent without a sale in the last 7 days</span></button>
   <button class="opt" role="option" data-slash="acos-audit"><b>/acos-audit</b><span>Ranks ASINs by ACOS and drafts bid changes for the worst ones</span></button>
   <button class="opt" role="option" data-slash="stock-and-buy-box"><b>/stock-and-buy-box</b><span>Checks stock and buy box for your top 20 ASINs</span></button>
   <button class="opt" role="option" data-slash="client-weekly-report"><b>/client-weekly-report</b><span>Builds the weekly client report in your format, ready to share</span></button>
   <button class="opt" role="option" data-slash="hector-platform-qa-validator"><b>/hector-platform-qa-validator</b><span>Validates the Hector AI platform end to end, including navigation, chat and MCP flows</span></button>
-  <p class="hint none" hidden>No method by that name.</p>
+  <p class="hint none" hidden>No workflow by that name.</p>
   <hr>
-  <a class="item" href="preferences.html"><svg><use href="sprite.svg#i-plus"/></svg>Create a method</a>
+  <a class="item" href="preferences.html"><svg><use href="sprite.svg#i-plus"/></svg>Create a workflow</a>
 </div>
 <div class="pop" id="pop-src" aria-label="Data sources">
   <div class="src-row"><img src="../assets/platforms/amazon.png" alt="">Amazon Ads<span class="sw" role="switch" aria-checked="true" aria-label="Use Amazon Ads"></span></div>
@@ -175,12 +175,12 @@
   <label class="fld"><span>Instructions <small>optional</small></span><textarea rows="3" placeholder="Hector Brain follows these in every chat in this workspace"></textarea></label>
   <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-ws" disabled>Create workspace</button></div>
 </div>
-<div class="modal" id="dlg-method" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
-  <h2 id="dm-t">New method</h2>
+<div class="modal" id="dlg-workflow" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
+  <h2 id="dm-t">New workflow</h2>
   <p>Write down how a job should be done. Anyone can run it by typing / and its name.</p>
   <label class="fld"><span>Name</span><input placeholder="e.g. Dark store revenue check" data-required></label>
   <label class="fld"><span>Instructions</span><textarea rows="6" placeholder="1. Pull sales by dark store for the last 14 days&#10;2. Compare with the 14 days before&#10;3. Flag stores down more than 15% and check stock-outs"></textarea></label>
-  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-method" disabled>Save method</button></div>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-workflow" disabled>Save workflow</button></div>
 </div>
 <div class="modal" id="dlg-share" role="dialog" aria-modal="true" aria-labelledby="ds-t" hidden>
   <h2 id="ds-t">Share</h2>
@@ -213,7 +213,7 @@
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<script src="marks.js?v=21"></script>
-<script src="brain.js?v=21"></script>
+<script src="marks.js?v=22"></script>
+<script src="brain.js?v=22"></script>
 </body>
 </html>

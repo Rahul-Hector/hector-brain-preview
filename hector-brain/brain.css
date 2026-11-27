@@ -428,7 +428,7 @@ td:first-child { font-weight: 500; color: var(--ink-2); }
 
 #chatlist .items { grid-template-columns: minmax(0, 1fr); }
 
-/* ---------- Methods (our Skills) and the / menu ---------- */
+/* ---------- Workflows (our Skills) and the / menu ---------- */
 .pop.slash { width: 460px; max-height: 340px; overflow-y: auto; }
 .pop.slash .opt { grid-template-columns: 1fr; }
 .pop.slash .opt b { font-weight: 600; }
@@ -440,25 +440,6 @@ td:first-child { font-weight: 500; color: var(--ink-2); }
 .explain p { margin-top: 4px; font-size: 13.5px; color: var(--muted); }
 kbd { font: 600 12px var(--sans); padding: 1px 6px; border-radius: 6px; background: var(--well); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink); }
 .item kbd, .dlg kbd { background: none; box-shadow: none; padding: 0; font-weight: 500; color: var(--faint); }
-
-/* ---------- "Other names" hint for Methods (review aid) ---------- */
-.hrow { display: flex; align-items: center; gap: 8px; }
-.hrow .sp { flex: 1; }
-.pop-h { padding: 2px 4px 0 0; }
-.pop-h .label { padding-left: 10px; }
-.namehint { position: relative; display: inline-flex; }
-.nh-btn { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; color: var(--faint); }
-.nh-btn svg { width: 17px; height: 17px; }
-.nh-btn:hover, .nh-btn:focus-visible { color: var(--ink); background: var(--hover); }
-.nh-card { position: absolute; right: 0; top: calc(100% + 8px); z-index: 80; width: 340px; padding: 12px 14px; border-radius: 14px; background: var(--ink); color: #fff;
-  display: grid; gap: 8px; text-align: left; opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity .15s, transform .15s var(--ease);
-  box-shadow: 0 18px 40px -16px rgba(22, 21, 26, .45); }
-.namehint.up .nh-card { top: auto; bottom: calc(100% + 8px); transform: translateY(4px); }
-.namehint:hover .nh-card, .namehint:focus-within .nh-card { opacity: 1; transform: none; }
-.nh-h { font-size: 11.5px; font-weight: 500; color: rgba(255, 255, 255, .6); }
-.nh-row { display: grid; gap: 1px; font-size: 12.5px; line-height: 1.4; color: rgba(255, 255, 255, .72); }
-.nh-row b { font-size: 13.5px; font-weight: 600; color: #fff; }
-.nh-out { padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, .14); font-size: 12px; color: rgba(255, 255, 255, .55); }
 
 /* ---------- Answer action bar: its own strip under a divider, not part of the answer ---------- */
 .abar { display: flex; align-items: center; gap: 2px; margin: 4px -24px -16px; padding: 10px 14px 10px 20px; border-top: 1px solid var(--line); }

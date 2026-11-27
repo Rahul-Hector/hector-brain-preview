@@ -8,7 +8,7 @@
 <link rel="icon" href="../assets/favicon-brain.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="rail.css">
-<link rel="stylesheet" href="brain.css?v=21">
+<link rel="stylesheet" href="brain.css?v=22">
 <script>try{if(localStorage.getItem('hm-d-collapsed')==='1')document.documentElement.classList.add('collapsed')}catch(e){}</script>
 </head>
 <body>
@@ -119,12 +119,12 @@
   <label class="fld"><span>Instructions <small>optional</small></span><textarea rows="3" placeholder="Hector Brain follows these in every chat in this workspace"></textarea></label>
   <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-ws" disabled>Create workspace</button></div>
 </div>
-<div class="modal" id="dlg-method" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
-  <h2 id="dm-t">New method</h2>
+<div class="modal" id="dlg-workflow" role="dialog" aria-modal="true" aria-labelledby="dm-t" hidden style="width:520px">
+  <h2 id="dm-t">New workflow</h2>
   <p>Write down how a job should be done. Anyone can run it by typing / and its name.</p>
   <label class="fld"><span>Name</span><input placeholder="e.g. Dark store revenue check" data-required></label>
   <label class="fld"><span>Instructions</span><textarea rows="6" placeholder="1. Pull sales by dark store for the last 14 days&#10;2. Compare with the 14 days before&#10;3. Flag stores down more than 15% and check stock-outs"></textarea></label>
-  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-method" disabled>Save method</button></div>
+  <div class="actions"><button class="btn secondary" data-close>Cancel</button><button class="btn primary" data-do="create-workflow" disabled>Save workflow</button></div>
 </div>
 <div class="modal" id="dlg-share" role="dialog" aria-modal="true" aria-labelledby="ds-t" hidden>
   <h2 id="ds-t">Share</h2>
@@ -157,7 +157,7 @@
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<script src="marks.js?v=21"></script>
-<script src="brain.js?v=21"></script>
+<script src="marks.js?v=22"></script>
+<script src="brain.js?v=22"></script>
 </body>
 </html>
