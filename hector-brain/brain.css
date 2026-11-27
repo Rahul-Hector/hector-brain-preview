@@ -638,3 +638,8 @@ input.rn { flex: 1; min-width: 0; height: 28px; margin: 0 -6px; padding: 0 6px; 
 .me .row { justify-content: flex-end; gap: 6px; margin-top: 6px; }
 .mwrap:has(.me.editing) { width: 75%; }
 .mwrap .me.editing { width: 100%; }
+
+/* Mode pill shows its model, quieter: "Standard · Sonnet 5.5" */
+.modelLbl { color: var(--faint); }
+.modelLbl::before { content: "·"; margin: 0 5px 0 1px; }
+small.mdl { margin-left: 6px; font-size: 12px; color: var(--faint); }

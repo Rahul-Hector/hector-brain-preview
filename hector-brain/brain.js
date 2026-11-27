@@ -327,4 +327,9 @@
       if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); $('[data-msg="send"]', me).click(); }
     });
   });
+  // ---------- Mode pill shows its model: picking a mode updates the model next to it
+  document.addEventListener('click', function (e) {
+    var r = e.target.closest('#pop-mode [role="radio"][data-model]'); if (!r) return;
+    $$('.modelLbl').forEach(function (l) { l.textContent = r.dataset.model; });
+  });
 })();
