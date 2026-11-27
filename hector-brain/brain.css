@@ -599,3 +599,29 @@ input.rn { flex: 1; min-width: 0; height: 28px; margin: 0 -6px; padding: 0 6px; 
 
 /* Menu rows are full width whether they are links or buttons */
 .pop .item, .pop .opt { width: 100%; text-align: left; }
+
+/* ---------- Icon sizes for Lucide (it fills ~15% more of its box than our old set) ----------
+   Four sizes only: 20 (empty states, new-workspace tile), 16 (menu, panels, rows, dialogs, Send, toggles),
+   14 (compact: answer actions, chips and pills, buttons with labels, search fields), 12 (chevrons, close, ticks). */
+.item > svg, .ib svg, .rowi .fi svg, .rowi .ib svg, .dlg .search svg, .send svg, .pill.sq svg, .dhead .fi svg,
+.alert svg, .tabs.vt svg, .ocard-b .fi svg, .ocard-b .ib svg { width: 16px; height: 16px; }
+.ab svg, .tb svg, .pill svg, .btn svg, .credit svg, .field-s svg, .pop .search svg, .well .ib svg, .reason .rule svg,
+.recent .item .more svg, .rowi .ck svg + * { width: 14px; height: 14px; }
+.acc svg, .title svg, .ws svg, .back svg, .trail svg, .rate .rate-x svg, .tray .rate-x svg, .item .pin-ic, .pop .item .chev-r { width: 12px; height: 12px; }
+.empty-state .ei svg, .ws-new svg { width: 20px; height: 20px; }
+
+/* Search dialog: "Esc" is also a click target (mouse users), results have no dividers */
+.dlg .esc { height: 26px; padding: 0 8px; border-radius: 7px; font: 500 11.5px var(--sans); color: var(--muted); box-shadow: inset 0 0 0 1px var(--line); }
+.dlg .esc:hover, .dlg .esc:focus-visible { background: var(--hover); color: var(--ink); }
+.dlg .esc[data-tt]::after { left: auto; right: 0; transform: translateY(3px); }
+.dlg .esc[data-tt]:hover::after { transform: none; }
+.dlg .rowi + .rowi, .dlg .rowi:hover + .rowi { box-shadow: none; }
+.dlg .rowi { border-radius: 10px; }
+
+/* List dividers: straight hairlines inset from the row edges (the old top shadow curved with the row's rounded corners).
+   Hidden next to a hovered or selected row so the highlight stays clean. */
+.rowi { position: relative; }
+.rowi + .rowi, .rowi:hover + .rowi { box-shadow: none; }
+.rowi + .rowi::before { content: ""; position: absolute; left: 12px; right: 12px; top: 0; height: 1px; background: var(--line); pointer-events: none; }
+.rowi:hover::before, .rowi:hover + .rowi::before, .rowi.sel::before, .rowi.sel + .rowi::before { opacity: 0; }
+.dlg .rowi + .rowi::before { display: none; }
