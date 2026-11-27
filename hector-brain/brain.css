@@ -596,3 +596,6 @@ input.rn { flex: 1; min-width: 0; height: 28px; margin: 0 -6px; padding: 0 6px; 
 .ocard { grid-template-columns: minmax(0, 1fr); }
 .snap table { font-size: 10px; }
 .snap th:first-child, .snap td:first-child { width: 46%; }
+
+/* Menu rows are full width whether they are links or buttons */
+.pop .item, .pop .opt { width: 100%; text-align: left; }
